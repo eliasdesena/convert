@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Convert.Core/Convert.Core.csproj" />
+    <Project Path="src/Convert.Shell/Convert.Shell.csproj" />
+    <Project Path="src/Convert/Convert.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Convert.Core.Tests/Convert.Core.Tests.csproj" />
+  </Folder>
+</Solution>

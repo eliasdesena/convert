@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Convert</RootNamespace>
+    <AssemblyName>Convert</AssemblyName>
+    <ApplicationIcon>..\..\packaging\Assets\Convert.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- WPF's Fluent theme (ThemeMode) is still flagged as experimental. -->
+    <NoWarn>$(NoWarn);WPF0001</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Convert.Core\Convert.Core.csproj" />
+    <Resource Include="..\..\packaging\Assets\Convert.ico" Link="Convert.ico" />
+  </ItemGroup>
+</Project>
