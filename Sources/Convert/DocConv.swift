@@ -97,8 +97,11 @@ enum PDFConv {
         if t.id == "pdf-txt" {
             guard let doc = PDFDocument(url: input) else { throw ConvertError("Couldn't open this PDF") }
             if doc.isLocked { throw ConvertError("This PDF is password-protected") }
+            guard let text = doc.string, text.rangeOfCharacter(from: CharacterSet.whitespacesAndNewlines.inverted) != nil else {
+                throw ConvertError("This PDF contains no extractable text")
+            }
             let out = uniqueOutput(for: input, ext: "txt")
-            try (doc.string ?? "").write(to: out, atomically: true, encoding: .utf8)
+            try text.write(to: out, atomically: true, encoding: .utf8)
             return [out]
         }
 

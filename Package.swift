@@ -5,6 +5,7 @@ let package = Package(
     name: "Convert",
     platforms: [.macOS(.v14)],
     targets: [
-        .executableTarget(name: "Convert", path: "Sources/Convert")
+        .executableTarget(name: "Convert", path: "Sources/Convert"),
+        .testTarget(name: "ConvertTests", dependencies: ["Convert"])
     ]
 )
