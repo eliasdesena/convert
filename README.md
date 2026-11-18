@@ -22,6 +22,10 @@
 > [!NOTE]
 > **This app is vibe coded.** It started as an afternoon of chatting with an AI coding assistant (Claude) and is now built in the open by a growing group of contributors. The code is small enough to read, but the app is young. Keep your originals (Convert never overwrites them anyway), and please [open an issue](../../issues) if something breaks.
 
+> [!TIP]
+> **On Windows?** There's an early Windows 11 port in [`windows/`](windows/README.md), with the same
+> formats and a "Convert…" entry right in Explorer's context menu.
+
 ---
 
 ## What it does

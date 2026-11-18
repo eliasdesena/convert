@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Plain Windows TFM: no WinRT projection, so the COM surrogate loads as little as possible. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <RootNamespace>Convert.Shell</RootNamespace>
+    <!-- Produces Convert.Shell.comhost.dll, the native DLL the package manifest registers. -->
+    <EnableComHosting>true</EnableComHosting>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The only code shared with Core: extension → kind. -->
+    <Compile Include="..\Convert.Core\MediaKinds.cs" Link="MediaKinds.cs" />
+  </ItemGroup>
+</Project>
